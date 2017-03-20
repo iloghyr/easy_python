@@ -19,7 +19,7 @@ re_host = '([^ ]+\.[^ ]+\.[^ ]+/.*)\?'
 re_var = '[\?|&]([^ ]+?)='
 
 
-url = 'wenku.baidu.com/tongji/view.html?type=jsonload&t=1374595009015&doc_id=ec6f38d4195f312b3169a573&v=6&time=7062&bcs=1&pn=1'
+url = 'wenku.bxaidu.com/tongji/view.html?type=jsonload&t=1374595009015&doc_id=ec6f38d4195f312b3169a573&v=6&time=7062&bcs=1&pn=1'
 
 m1 = re.compile(re_host)
 print m1.match(url).group(1)

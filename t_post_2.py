@@ -4,9 +4,9 @@ import urllib
 import time
 import random
 
-articleId = '694685841'
-content = '我是NS测试部的黄佑榕，我的安全我做主'
-refer = 'http://family.baidu.com/portal/newsDetail?articleId=683782630'
+articleId = 'xx'
+content = 'xx'
+refer = 'http://family.baixdu.com/portal/newsDetail?articleId=683782630'
 louceng = 150
 cookie = 'BAIDUID=DC4F0E8FCCB21A52F91934FFEFCE106A:FG=1; BDUSS=ozaDlRU1VrVWFtaUt3fk5Sdzh1YXJNQmFTNkExVEwwMkVETVByN3V6QmJ6M0JUQVFBQUFBJCQAAAAAAAAAAAEAAACROWQ4YmRzZWMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFtCSVNbQklTTl; _ga=GA1.2.1971478939.1399461096; express.sid=s%3Ax7VN%2BIllno3oU0k8akzX7u%2BX.ntIepxzmgL5liZzpqHAukK9MoYrRUZe5TTwQszYptbc; Hm_lvt_e5c8f30b30415b1fc94d820ba9d4d08c=1402381659; Hm_lpvt_e5c8f30b30415b1fc94d820ba9d4d08c=1402384207; JSESSIONID=CCA50420E4A52DCB47C252BCE7ED49C3.worker6'
 
@@ -17,7 +17,7 @@ def getTime():
 def getBDhttp(url, data=None):
     try:
         r = urllib2.Request(url)
-        r.add_header('Host','family.baidu.com')
+        r.add_header('Host','family.xbaidu.com')
         r.add_header('Cookie',cookie)
         r.add_header('Referer',refer)
         r.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0')
@@ -38,7 +38,7 @@ def getBDhttp(url, data=None):
 
 def doPost(articleId = '', content = ''):
     try:
-        api = 'http://family.baidu.com/portal/newsdetail/commentlist'
+        api = 'http://family.baixdu.com/portal/newsdetail/commentlist'
         data = {'articleId':articleId,'content':content,'replyToUser':'','replyToComment':''}
         res = getBDhttp(api, data)  
         print res.read(),
@@ -48,7 +48,7 @@ def doPost(articleId = '', content = ''):
 
 def doCheck(articalId=''):
     try:
-        api = 'http://family.baidu.com/portal/comments?articleId=%s' % articalId
+        api = 'http://family.baxidu.com/portal/comments?articleId=%s' % articalId
         content = getBDhttp(api)
         index = content.find('楼')
         if index  > 0:

@@ -7,7 +7,7 @@ from email.utils import COMMASPACE
 
 
 #mailto = ['huangyourong@baidu.com']
-def sendMail(mailfrom='digauto@baidu.com', mailto='huangyourong@baidu.com', subject='百度日志分析平台后台', content='测试内容'):
+def sendMail(mailfrom='digauto@baixdu.com', mailto='huangyourong@bxaidu.com', subject='x日志分析平台后台', content='测试内容'):
 	msg = MIMEMultipart()  
 	#msg['From'] = "auto@baidu.com"  
 	#mailto = ['huangyourong@baidu.com']
@@ -30,11 +30,11 @@ def sendMail(mailfrom='digauto@baidu.com', mailto='huangyourong@baidu.com', subj
 	  
 	#发送邮件  
 	smtp = smtplib.SMTP()
-	smtp.connect('xxx.baidu.com')  
+	smtp.connect('xxx.baixdu.com')  
 	#smtp.login('from', '密码')  
 	ret = smtp.sendmail(mailfrom, mailto, msg.as_string())  
 	smtp.quit()  
 	print '邮件发送成功' ,mailto
 if __name__ == '__main__':
-	mailto = ['huangyourong@baidu.com']
+	mailto = ['huangyourong@baixdu.com']
 	sendMail(mailto=mailto)
